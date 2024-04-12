@@ -22,6 +22,8 @@ You can access the HTML using the document object, which represents your entire 
 
 One method for finding specific elements in your HTML is using the querySelector() method.
 The querySelector() method takes a CSS selector as an argument and returns the first element that matches that selector.
+If you are not going to assign a new value to a variable, it is best practice to use the const keyword to declare it instead of the let keyword.
+This will tell JavaScript to throw an error if you accidentally reassign it.
 */
 let xp = 0;
 let health = 100;
@@ -30,4 +32,4 @@ let currentWeapon = 0;
 let fighting;
 let inventory = ["stick",];
 let monsterHealth;
-let button1 = document.querySelector("#button1");
+const button1 = document.querySelector("#button1");

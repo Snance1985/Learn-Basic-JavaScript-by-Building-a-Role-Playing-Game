@@ -16,6 +16,12 @@ For example:
 let order = ["first", "second", "third"];
 This is an array which holds three values.
 Notice how the values are separated by commas.
+JavaScript interacts with the HTML using the Document Object Model, or DOM.
+The DOM is a tree of objects that represents the HTML.
+You can access the HTML using the document object, which represents your entire HTML document.
+
+One method for finding specific elements in your HTML is using the querySelector() method.
+The querySelector() method takes a CSS selector as an argument and returns the first element that matches that selector.
 */
 let xp = 0;
 let health = 100;
@@ -24,3 +30,4 @@ let currentWeapon = 0;
 let fighting;
 let inventory = ["stick",];
 let monsterHealth;
+let button1 = document.querySelector("#button1");

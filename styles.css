@@ -17,3 +17,10 @@ body {
     margin-right: auto;
     padding: 10px;
 }
+#controls, #stats {
+    border: #0a0a23;
+    border-width: 1px;
+    border-style: solid;
+    color: #0a0a23;
+    padding: 5px;
+}

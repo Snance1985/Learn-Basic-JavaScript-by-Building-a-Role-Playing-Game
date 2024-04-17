@@ -54,3 +54,6 @@ These indicate the section of code that is within the function.
 function goStore() {
     console.log("Going to store.");
 }
+function goCave() {
+    console.log("Going to cave.");
+}

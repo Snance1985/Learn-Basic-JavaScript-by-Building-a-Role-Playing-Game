@@ -42,3 +42,15 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
+/*
+Functions are special tools that allow you to run sections of code at specific times.
+You can declare functions using the function keyword.
+Here is an example of a function called functionName - note the opening and closing curly braces.
+function functionName() {
+
+}
+These indicate the section of code that is within the function.
+*/
+function goStore() {
+    
+}

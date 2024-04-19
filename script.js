@@ -51,8 +51,19 @@ function functionName() {
 }
 These indicate the section of code that is within the function.
 */
+/*
+The innerText property controls the text that appears in an HTML element.
+For example:
+
+<p id="info">Demo content</p> 
+
+const info = document.querySelector("#info"); 
+info.innerText = "Hello World"; 
+
+The following example would change the text of the p element from Demo content to Hello World.
+*/
 function goStore() {
-    console.log("Going to store.");
+    button1.innerText = "Buy 10 health (10 gold)";
 }
 function goCave() {
     console.log("Going to cave.");

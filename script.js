@@ -77,6 +77,15 @@ function goCave() {
 function fightDragon() {
     console.log("Fighting dragon.");
 }
+function buyHealth(){
+
+}
+function buyWeapon(){
+
+}
+function goTown(){
+
+}
 /*
 button1 represents your first button element.
 These elements have a special property called onclick, which you can use to determine what happens when someone clicks that button.

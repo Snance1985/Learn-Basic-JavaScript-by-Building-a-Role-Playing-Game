@@ -131,3 +131,41 @@ When the button is clicked, myFunction will be called.
 button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
+
+/*
+Objects are non primitive data types that store key-value pairs.
+Non primitive data types are mutable data types that are not undefined, null, boolean, number, string, or symbol.
+Mutable means that the data can be changed after it is created.
+
+Here is the basic syntax for an object:
+
+{
+  key: value
+}
+Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through properties.
+
+Properties consist of a key and a value.
+The key is the name of the property, and the value is the data stored in the property.
+
+Here is an example of an object with a single property:
+
+const obj = {
+  name: "Quincy Larson"
+};
+If the property name (key) of an object has a space in it, you will need to use single or double quotes around the name.
+Here is an example of an object with a property name that has a space:
+const spaceObj = {
+  "Space Name": "Kirk",
+};
+If you tried to write a key without the quotes, it would throw an error:
+const spaceObj = {
+  // Throws an error
+  Space Name: "Kirk",
+}; 
+
+*/
+const cat = {
+    name: "Whiskers",
+    "Number of legs":4
+};
+console.log(cat);

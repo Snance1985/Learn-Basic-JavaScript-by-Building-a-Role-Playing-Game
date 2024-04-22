@@ -42,7 +42,14 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
-const locations = [];
+const locations = [
+    {
+        name:"town square",
+        "button text":["Go to store","Go to cave","Fight dragon"],
+        "button functions":[goStore,goCave,fightDragon],
+        text:"You are in the town square. You see a sign that says \"Store\"."
+    }
+];
 /*
 Functions are special tools that allow you to run sections of code at specific times.
 You can declare functions using the function keyword.
@@ -163,9 +170,32 @@ const spaceObj = {
   Space Name: "Kirk",
 }; 
 
-*/
-const cat = {
-    name: "Whiskers",
-    "Number of legs":4
+There are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array.
+
+Dot notation is what you use when you know the name of the property you're trying to access ahead of time.
+
+object.property;
+
+Here is a sample of using dot notation (.) to read the name property of the developer object:
+
+const developer = {
+  name: "Jessica",
+}
+
+// Output: Jessica
+console.log(developer.name); 
+
+The second way to access the properties of an object is bracket notation ([]).
+If the property of the object you are trying to access has a space in its name, you will need to use bracket notation.
+
+objectName["property name"];
+
+Here is a sample of using bracket notation to read an object's property:
+
+const spaceObj = {
+  "Space Name": "Kirk",
 };
-console.log(cat);
+
+spaceObj["Space Name"]; // "Kirk"
+
+*/

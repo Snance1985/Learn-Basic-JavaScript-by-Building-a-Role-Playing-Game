@@ -42,6 +42,7 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
+const locations = [];
 /*
 Functions are special tools that allow you to run sections of code at specific times.
 You can declare functions using the function keyword.
@@ -61,6 +62,15 @@ const info = document.querySelector("#info");
 info.innerText = "Hello World"; 
 
 The following example would change the text of the p element from Demo content to Hello World.
+
+When you have repetition in your code, this is a sign that you need another function.
+Functions can take parameters, which are values that are given to the function each time it is run.
+Here is a function that takes a parameter called param:
+
+function myFunction(param) {
+    console.log(param);
+}
+
 */
 function goTown() {
     button1.innerText = "Go to store";
@@ -69,7 +79,7 @@ function goTown() {
     button1.onclick = goStore;
     button2.onclick = goCave;
     button3.onclick = fightDragon;
-    text.innerText = "You are in the town square. You see a sign that says \"Store.\"";
+    text.innerText = "You are in the town square. You see a sign that says \"Store\".";
   }
   /*
 You need to wrap the text Store in double quotes.
@@ -80,6 +90,9 @@ Here is an example:
 const escapedString = "Naomi likes to play \"Zelda\" sometimes.";
 
   */
+ function update(location) {
+
+ }
 function goStore() {
     button1.onclick = buyHealth;
     button2.onclick = buyWeapon;

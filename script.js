@@ -82,17 +82,23 @@ Here is a function that takes a parameter called param:
 
 function myFunction(param) {
     console.log(param);
+    
 }
+You pass arguments by including them within the parentheses of the function call.
+For example, calling myFunction with an arg argument would look like:
 
+myFunction(arg)
+
+Pass in only the first element of the locations array by adding [0] at the end of the variable.
+For example: myFunction(arg[0]);.
+
+This is called bracket notation.
+Values in an array are accessed by index.
+Indices are numerical values and start at 0 - this is called zero-based indexing.
+arg[0] would be the first element in the arg array.
 */
 function goTown() {
-    button1.innerText = "Go to store";
-    button2.innerText = "Go to cave";
-    button3.innerText = "Fight dragon";
-    button1.onclick = goStore;
-    button2.onclick = goCave;
-    button3.onclick = fightDragon;
-    text.innerText = "You are in the town square. You see a sign that says \"Store\".";
+    update(locations[0]);
   }
   /*
 You need to wrap the text Store in double quotes.
@@ -102,18 +108,24 @@ Here is an example:
 
 const escapedString = "Naomi likes to play \"Zelda\" sometimes.";
 
+Instead of assigning the innerText and onclick properties to specific strings and functions, the update function will use data from the location that is passed into it.
+First, that data needs to be passed.
+Here is an example of calling a function named myFunction:
+
+myFunction();
+
   */
  function update(location) {
-
+    button1.innerText = location["button text"][0];
+    button2.innerText = location["button text"][1];
+    button3.innerText = location["button text"][2];
+    button1.onclick = location["button functions"][0];
+    button2.onclick = location["button functions"][1];
+    button3.onclick = location["button functions"][2];
+    text.innerText = location.text;
  }
 function goStore() {
-    button1.onclick = buyHealth;
-    button2.onclick = buyWeapon;
-    button3.onclick = goTown;
-    button1.innerText = "Buy 10 health (10 gold)";
-    button2.innerText = "Buy weapon (30 gold)";
-    button3.innerText = "Go to town square";
-    text.innerText = "You enter the store.";
+
 }
 function goCave() {
     console.log("Going to cave.");

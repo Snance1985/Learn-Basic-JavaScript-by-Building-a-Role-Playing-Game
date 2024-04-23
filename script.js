@@ -133,8 +133,24 @@ function goCave() {
 function fightDragon() {
     console.log("Fighting dragon.");
 }
+/*
+There is a shorthand way to add or subtract from a variable called compound assignment.
+For example, changing num = num + 5 to compound assignment would look like num += 5.
+Example if statement:
+const num = 5;
+if (num >= 3) {
+  console.log("This code will run because num is greater than or equal to 3.");
+}
+*/
 function buyHealth(){
-
+    if (gold >= 10) {
+        gold -= 10;
+        health += 10;
+        goldText.innerText = gold;
+        healthText.innerText = health;
+        } else {
+            text.innerText = "You do not have enough gold to buy health.";
+        }
 }
 function buyWeapon(){
 

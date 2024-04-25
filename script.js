@@ -156,8 +156,26 @@ function goStore() {
 function goCave() {
     console.log("Going to cave.");
 }
+function fightSlime() {
+  fighting = 0;
+  goFight();
+}
+function fightBeast() {
+  fighting = 1;
+  goFight();
+}
 function fightDragon() {
-    console.log("Fighting dragon.");
+  fighting = 2;
+  goFight();
+}
+function goFight(){
+
+}
+function attack(){
+
+}
+function dodge(){
+  
 }
 /*
 There is a shorthand way to add or subtract from a variable called compound assignment.

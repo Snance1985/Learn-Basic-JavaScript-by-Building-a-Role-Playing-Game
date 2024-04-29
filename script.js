@@ -187,11 +187,19 @@ function goFight(){
   monsterName.innerText = monsters[fighting].name;
   monsterHealthText.innerText = monsterHealth;
 }
+/*
+The Math object in JavaScript contains static properties and methods for mathematical constants and functions.
+One of those is Math.random(), which generates a random number from 0 (inclusive) to 1 (exclusive).
+Another is Math.floor(), which rounds a given number down to the nearest integer.
+
+Using these, you can generate a random number within a range.
+For example, this generates a random number between 1 and 5: Math.floor(Math.random() * 5) + 1;.
+*/
 function attack(){
   text.innerText = "The " + monsters[fighting].name + " attacks.";
   text.innerText += " You attack it with your " + weapons[currentWeapon].name + ".";
   healthText = health -= monsters[fighting].level;
-  monsterHealth -= weapons[currentWeapon].power;
+  monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;
 }
 function dodge(){
   

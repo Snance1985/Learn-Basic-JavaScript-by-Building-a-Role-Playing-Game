@@ -210,7 +210,7 @@ function attack(){
   }
 }
 function dodge(){
-  
+  text.innerText = "You dodge the attack from the " + monsters[fighting].name + ".";
 }
 /*
 There is a shorthand way to add or subtract from a variable called compound assignment.
@@ -344,3 +344,9 @@ const spaceObj = {
 spaceObj["Space Name"]; // "Kirk"
 
 */
+function defeatMonster() {
+
+};
+function lose() {
+
+};

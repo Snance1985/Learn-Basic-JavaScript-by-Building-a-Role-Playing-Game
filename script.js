@@ -160,6 +160,7 @@ myFunction();
 
   */
  function update(location) {
+    monsterStats.style.display = 'none';
     button1.innerText = location["button text"][0];
     button2.innerText = location["button text"][1];
     button3.innerText = location["button text"][2];
@@ -358,5 +359,5 @@ function defeatMonster() {
   update(locations[4]);
 };
 function lose() {
-
+  monsterStats.style.display = 'none';
 };

@@ -217,7 +217,7 @@ For example, this generates a random number between 1 and 5: Math.floor(Math.ran
 function attack(){
   text.innerText = "The " + monsters[fighting].name + " attacks.";
   text.innerText += " You attack it with your " + weapons[currentWeapon].name + ".";
-  healthText = health -= monsters[fighting].level;
+  health -= getMonsterAttackValue(monsters[fighting].level);
   monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;
   healthText.innerText = health;
   monsterHealthText.innerText = monsterHealth;
@@ -232,6 +232,29 @@ function attack(){
       defeatMonster();
     }
   }
+}
+
+/*
+The ternary operator is a conditional operator and can be used as a one-line if-else statement.
+The syntax is: condition ? expressionIfTrue : expressionIfFalse.
+
+Here is an example of returning a value using an if-else statement and a refactored example using a ternary operator:
+
+// if-else statement
+if (score > 0) {
+  return score
+} else {
+  return default_score
+}
+
+// ternary operator
+return score > 0 ? score : default_score
+*/
+
+function getMonsterAttackValue(level){
+  const hit = (level * 5) - (Math.floor(Math.random() * xp));
+  console.log(hit);
+  return hit > 0 ? hit : 0;
 }
 
 function dodge(){

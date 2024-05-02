@@ -173,7 +173,7 @@ myFunction();
     button1.onclick = location["button functions"][0];
     button2.onclick = location["button functions"][1];
     button3.onclick = location["button functions"][2];
-    text.innerText = location.text;
+    text.innerHTML = location.text;
  }
 function goStore() {
     update(locations[1]);
@@ -219,9 +219,15 @@ function attack(){
     lose();
   }
   else if (monsterHealth <= 0) {
-    defeatMonster ();
+    if(fighting === 2){
+      winGame();
+    }
+    else {
+      defeatMonster();
+    }
   }
 }
+
 function dodge(){
   text.innerText = "You dodge the attack from the " + monsters[fighting].name + ".";
 }

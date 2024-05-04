@@ -214,21 +214,23 @@ Another is Math.floor(), which rounds a given number down to the nearest integer
 Using these, you can generate a random number within a range.
 For example, this generates a random number between 1 and 5: Math.floor(Math.random() * 5) + 1;.
 */
-function attack(){
+function attack() {
   text.innerText = "The " + monsters[fighting].name + " attacks.";
   text.innerText += " You attack it with your " + weapons[currentWeapon].name + ".";
   health -= getMonsterAttackValue(monsters[fighting].level);
+if(isMonsterHit()) {
   monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;
+} else {
+  text.innerText += " You miss.";
+}
   healthText.innerText = health;
   monsterHealthText.innerText = monsterHealth;
-  if (health <= 0){
+  if (health <= 0) {
     lose();
-  }
-  else if (monsterHealth <= 0) {
-    if(fighting === 2){
+  } else if (monsterHealth <= 0) {
+    if (fighting === 2) {
       winGame();
-    }
-    else {
+    } else {
       defeatMonster();
     }
   }

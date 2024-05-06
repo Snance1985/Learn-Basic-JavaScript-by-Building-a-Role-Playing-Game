@@ -234,6 +234,9 @@ if(isMonsterHit()) {
       defeatMonster();
     }
   }
+  if(Math.random() <= .1) {
+
+  }
 }
 
 /*

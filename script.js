@@ -451,4 +451,15 @@ function pick(guess) {
   numbers.push(Math.floor(Math.random() * 11));
   }
   text.innerText = "You picked " + guess + ". Here are the random numbers:\n"
+  for(let i = 0; i < 10; i++) {
+
+  }
   };
+
+  /*
+for (let i = 0; i < 5; i++) {
+  // code to run
+}
+
+for loops are declared with three expressions separated by semicolons: for (a; b; c), where a is the initialization expression, b is the condition, and c is the final expression.
+  */

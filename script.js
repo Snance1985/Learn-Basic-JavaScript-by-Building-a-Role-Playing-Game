@@ -454,7 +454,10 @@ function pick(guess) {
   for(let i = 0; i < 10; i++) {
     text.innerText += numbers[i] + "\n";
   }
-  };
+  if(numbers.includes(guess)){
+
+  }
+};
 
   /*
 for (let i = 0; i < 5; i++) {
@@ -462,4 +465,16 @@ for (let i = 0; i < 5; i++) {
 }
 
 for loops are declared with three expressions separated by semicolons: for (a; b; c), where a is the initialization expression, b is the condition, and c is the final expression.
+
+The .includes() method determines if an array contains an element and will return either true or false.
+
+Here is an example of the .includes() syntax:
+
+const numbersArray = [1, 2, 3, 4, 5]
+const number = 3
+
+if (numbersArray.includes(number)) {
+  console.log("The number is in the array.")
+}
+
   */
